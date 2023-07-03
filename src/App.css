@@ -16,8 +16,6 @@ Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
 
 - Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%) */
 
-
-
 /* Header CSS */
 
 header {
@@ -25,13 +23,14 @@ header {
   color: white;
   display: flex;
   margin: auto;
-  width: 650px;
   padding: 15px 20px;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 16px;
   line-height: 23px;
   justify-content: space-between;
   margin-top: 20px;
+  gap: 20vw;
+  max-width: 720px;
 }
 
 Header p {
@@ -70,200 +69,139 @@ Header p {
 
 .selector {
   margin-top: 90px;
-  text-align: center;
   display: flex;
   justify-content: center;
 }
 
 .pentagon {
   position: fixed;
+  width: 600px;
+  height: 600px;
 }
 
 .options {
-  position: fixed;
+  position: relative;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.outer_circle_rock {
+.outerRadi {
+  width: 625px;
+  height: 1px;
+  background: transparent;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  top: 320px;
+}
+
+.first {
+  transform: rotate(90deg);
+}
+.second {
+  transform: rotate(160deg);
+}
+.third {
+  transform: rotate(18deg);
+}
+.fourth {
+  transform: rotate(302deg);
+}
+.fifth {
+  transform: rotate(240deg);
+}
+
+.outer_circle {
   display: flex;
   position: relative;
-  background: radial-gradient(ellipse at top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 500px;
-  top: -36px;
+  top: -95px;
+  right: 70px;
 }
-.outer_circle_rock:hover {
-  box-shadow: 0 1px 1px hsla(349, 71%, 52%, 0.14),
-              0 2px 2px hsl(349, 71%, 52%, 0.14),
-              0 4px 4px hsl(349, 71%, 52%, 0.14),
-              0 8px 8px hsl(349, 71%, 52%, 0.14),
-              0 16px 16px hsl(349, 71%, 52%, 0.14);
-}
-.inner_circle_rock {
+
+.inner_circle {
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  margin: auto;
   position: relative;
   background-color: rgb(240, 240, 240);
-  width: 115px;
-  height: 115px;
+  width: 155px;
+  height: 155px;
   border-radius: 500px;
 }
-.inner_circle_rock:hover {
+.inner_circle:hover {
   background-color: white;
 }
-.rock {
+
+.icons {
+  width: 70px;
   margin: auto;
-  width: 50px;
+}
+
+.outer_circle_rock {
+  background: radial-gradient(
+    ellipse at top,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+  transform: rotate(-90deg);
+}
+
+.outer_circle_rock:hover {
+  box-shadow: 0 1px 1px hsla(349, 71%, 52%, 0.14),
+    0 2px 2px hsl(349, 71%, 52%, 0.14), 0 4px 4px hsl(349, 71%, 52%, 0.14),
+    0 8px 8px hsl(349, 71%, 52%, 0.14), 0 16px 16px hsl(349, 71%, 52%, 0.14);
 }
 
 .outer_circle_paper {
-  display: flex;
-  position: relative;
   background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  width: 140px;
-  height: 140px;
-  border-radius: 500px;
-  top: -45px;
-  left: 190px;
+  transform: rotate(-160deg);
 }
+
 .outer_circle_paper:hover {
   box-shadow: 0 1px 1px hsla(230, 89%, 62%, 0.14),
-              0 2px 2px hsl(230, 89%, 62%, 0.14),
-              0 4px 4px hsl(230, 89%, 62%, 0.14),
-              0 8px 8px hsl(230, 89%, 62%, 0.14),
-              0 16px 16px hsl(230, 89%, 62%, 0.14);
-}
-.inner_circle_paper {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: rgb(240, 240, 240);
-  width: 115px;
-  height: 115px;
-  border-radius: 500px;
-}
-.inner_circle_paper:hover {
-  background-color: white;
-}
-.paper {
-  margin: auto;
-  width: 50px;
+    0 2px 2px hsl(230, 89%, 62%, 0.14), 0 4px 4px hsl(230, 89%, 62%, 0.14),
+    0 8px 8px hsl(230, 89%, 62%, 0.14), 0 16px 16px hsl(230, 89%, 62%, 0.14);
 }
 
 .outer_circle_spock {
-  display: flex;
-  position: relative;
   background: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
-  width: 140px;
-  height: 140px;
-  border-radius: 500px;
-  top: -185px;
-  right: 190px;
+  transform: rotate(-18deg);
 }
 .outer_circle_spock:hover {
   box-shadow: 0 1px 1px hsla(189, 59%, 53%, 0.14),
-              0 2px 2px hsl(189, 59%, 53%, 0.14),
-              0 4px 4px hsl(189, 59%, 53%, 0.14),
-              0 8px 8px hsl(189, 59%, 53%, 0.14),
-              0 16px 16px hsl(189, 59%, 53%, 0.14);
+    0 2px 2px hsl(189, 59%, 53%, 0.14), 0 4px 4px hsl(189, 59%, 53%, 0.14),
+    0 8px 8px hsl(189, 59%, 53%, 0.14), 0 16px 16px hsl(189, 59%, 53%, 0.14);
 }
-.inner_circle_spock {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: rgb(240, 240, 240);
-  width: 115px;
-  height: 115px;
-  border-radius: 500px;
-}
-.inner_circle_spock:hover {
-  background-color: white;
-}
+
 .spock {
-  margin: auto;
-  width: 50px;
+  margin-left: 48px;
 }
 
 .outer_circle_lizard {
-  display: flex;
-  position: relative;
   background: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
-  width: 140px;
-  height: 140px;
-  border-radius: 500px;
-  top: -110px;
-  right: 120px;
+  transform: rotate(-302deg);
 }
 .outer_circle_lizard:hover {
   box-shadow: 0 1px 1px hsla(261, 73%, 60%, 0.14),
-              0 2px 2px hsl(261, 73%, 60%, 0.14),
-              0 4px 4px hsl(261, 73%, 60%, 0.14),
-              0 8px 8px hsl(261, 73%, 60%, 0.14),
-              0 16px 16px hsl(261, 73%, 60%, 0.14);
-}
-.inner_circle_lizard {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: rgb(240, 240, 240);
-  width: 115px;
-  height: 115px;
-  border-radius: 500px;
-}
-.inner_circle_lizard:hover {
-  background-color: white;
-}
-.lizard {
-  margin: auto;
-  width: 50px;
+    0 2px 2px hsl(261, 73%, 60%, 0.14), 0 4px 4px hsl(261, 73%, 60%, 0.14),
+    0 8px 8px hsl(261, 73%, 60%, 0.14), 0 16px 16px hsl(261, 73%, 60%, 0.14);
 }
 
 .outer_circle_scissor {
-  display: flex;
-  position: relative;
   background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  width: 140px;
-  height: 140px;
   border-radius: 500px;
-  bottom: 250px;
-  left: 120px;
+  transform: rotate(-290deg);
 }
 .outer_circle_scissor:hover {
   box-shadow: 0 1px 1px hsla(39, 89%, 49%, 0.14),
-              0 2px 2px hsl(39, 89%, 49%, 0.14),
-              0 4px 4px hsl(39, 89%, 49%, 0.14),
-              0 8px 8px hsl(39, 89%, 49%, 0.14),
-              0 16px 16px hsl(39, 89%, 49%, 0.14);
-}
-.inner_circle_scissor {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: rgb(240, 240, 240);
-  width: 115px;
-  height: 115px;
-  border-radius: 500px;
-}
-.inner_circle_scissor:hover {
-  background-color: white;
-}
-.scissor {
-  margin: auto;
-  width: 50px;
+    0 2px 2px hsl(39, 89%, 49%, 0.14), 0 4px 4px hsl(39, 89%, 49%, 0.14),
+    0 8px 8px hsl(39, 89%, 49%, 0.14), 0 16px 16px hsl(39, 89%, 49%, 0.14);
 }
 
 /* Rules */
@@ -275,9 +213,10 @@ Header p {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
-  height: 100vh;}
+  height: 100vh;
+}
 
-.modal-content{
+.modal-content {
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -285,8 +224,8 @@ Header p {
   margin-top: 100px;
   background-color: white;
   padding: 20px 50px 50px;
-  width: 400px;
-  height: 500px;
+  width: 600px;
+  height: 700px;
   border-radius: 20px;
 }
 
@@ -313,7 +252,7 @@ Header p {
 }
 
 .rulesModal {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 40px;
   padding: 10px 40px;
@@ -335,7 +274,7 @@ Header p {
   outline: none;
 }
 
-section>button {
+section > button {
   background-color: rgb(0, 133, 249);
   position: absolute;
   z-index: 100;
@@ -354,7 +293,9 @@ section>button {
   gap: 200px;
 }
 
-.selected_left, .selected_right, .middleSection {
+.selected_left,
+.selected_right,
+.middleSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -365,7 +306,8 @@ section>button {
   gap: 100px;
 }
 
-.selected_left>p, .selected_right>p {
+.selected_left > p,
+.selected_right > p {
   font-size: 24px;
   letter-spacing: 3px;
   color: white;
@@ -374,8 +316,9 @@ section>button {
   margin-bottom: 50px;
 }
 
-.selected_left>section, .selected_right>section {
-  transform: scale(2);
+.selected_left > section,
+.selected_right > section {
+  transform: scale(1.4);
 }
 
 .loadingCircle {
@@ -401,7 +344,7 @@ section>button {
   margin: 80px 0 0 0;
 }
 
-.middleSection>button {
+.middleSection > button {
   position: static;
   display: inherit;
   color: hsl(229, 25%, 31%);
@@ -413,5 +356,151 @@ section>button {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
+}
 
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  #root {
+    position: fixed;
+  }
+
+  header {
+    transform: scale(0.8);
+    gap: 0px;
+    width: 100vw;
+  }
+  .selector {
+    margin-top: 6vh;
+  }
+  .pentagon {
+    width: 300px;
+    height: 300px;
+  }
+  .outerRadi {
+    width: 290px;
+    height: 1px;
+    top: 160px;
+  }
+  .outer_circle {
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 500px;
+    top: -46px;
+    right: 35px;
+  }
+  .inner_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 500px;
+  }
+  .inner_circle > button {
+    width: 100px;
+    height: 100px;
+    border-radius: 500px;
+  }
+  .icons {
+    width: 40px;
+  }
+  .spock {
+    margin: auto;
+    margin-left: 25px;
+  }
+  .modal-container {
+    z-index: 2;
+    position: fixed;
+    top: -10px;
+    left: -36px;
+    width: 120vw;
+    background-color: white;
+  }
+  .modal-content {
+    margin-top: 28px;
+    width: 80vw;
+    height: 450px;
+    z-index: 1;
+  }
+  .rules {
+    margin-top: 80px;
+  }
+  .rulesModal {
+    right: 31.5%;
+    margin: auto;
+  }
+  .selected_option {
+    gap: 10vw;
+    justify-content: center;
+  }
+  .selectedMove {
+    position: inherit;
+  }
+
+  .selected_left > p,
+  .selected_right > p {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  .selected_left,
+  .selected_right,
+  .middleSection {
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .middleSection {
+    position: absolute;
+  }
+  .middleSection > p {
+    margin-top: 140px;
+    font-size: 48px;
+  }
+  .middleSection > button {
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  .loadingCircle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (height: 640px) and (width: 360px){
+  .rulesModal {
+    right: 31%;
+    bottom: 10px;
+  }
+}
+@media screen and (width: 412px) and (height: 915px){
+  .selector {
+    margin-top: 160px;
+  }
+  .rules {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2040px) {
 }

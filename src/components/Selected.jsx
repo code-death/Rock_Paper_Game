@@ -105,8 +105,8 @@ let message;
     <>
       <section className="selected_left">
         <p>YOU PICKED</p>
-        <section className={`selectedMove outer_circle_` + props.icon}>
-          <section className={`selectedMove inner_circle_` + props.icon}>
+        <section className={`selectedMove outer_circle outer_circle_` + props.icon}>
+          <section className={`selectedMove  inner_circle inner_circle_` + props.icon}>
             <img
               src={source}
               alt={`${props.icon}`}
@@ -121,8 +121,8 @@ let message;
         {loading ? (
           <div className="loadingCircle"></div>
         ) : (
-          <section className={`selectedMove outer_circle_` + houseIcon[1]}>
-            <section className={`selectedMove inner_circle_` + houseIcon[1]}>
+          <section className={`selectedMove outer_circle outer_circle_` + houseIcon[1]}>
+            <section className={`selectedMove  inner_circle inner_circle_` + houseIcon[1]}>
               <img src={houseIcon[0]} alt="rock" className="icons rock" />
             </section>
           </section>

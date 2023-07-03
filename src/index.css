@@ -7,7 +7,7 @@
   overflow: hidden;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: radial-gradient(ellipse at top, #1f3756, #141539);
+  background: radial-gradient(ellipse at top, #1f3756, #141539) no-repeat;
 }
 
 a {
